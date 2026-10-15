@@ -117,7 +117,6 @@ Compared with the standard linked bag:
 
 ### What happened to our unknowns?
 
-<!-- TODO (team): check this list against the unknowns in your scope document. -->
 
 Figured out:
 
@@ -138,8 +137,6 @@ Still open:
 
 ### What doesn't work yet?
 
-- **No tests in the repository.** The MVP features work when run by hand, but
-  the prototype ships without its JUnit test files.
 - **"Each person wins once" is not implemented.**
 - **`load` trusts the file's numbers.** It checks the format, but not that
   ticket IDs are unique or that the saved total matches the tickets, so a
@@ -152,12 +149,8 @@ Still open:
 
 ### What is left to finish the MVP?
 
-The MVP features (sell, add prize, draw, undo, status, quit) all work. In
-order, we will:
+The MVP features (sell, add prize, draw, undo, status, quit) all work WE still need to
 
-1. Add the JUnit tests back to the repository and make sure they all pass.
-2. Add the course header (honor-code pledge, names, IDs) and finish Javadoc
-   on every file.
 3. Tighten `load` validation (unique ticket IDs, `NEXTID` greater than every
    ticket ID, saved total consistent with tickets sold).
 
@@ -167,7 +160,7 @@ order, we will:
 - **Committing to:** "each person wins once" – one `removeIf` call in
   `drawWinner`, plus storing the removed tickets on the `Winner` so undo can
   restore them.
-- **Dropping:** <!-- TODO (team): list any scope stretch goals you are dropping, or write "none". -->
+- **Dropping:** none
 
 ### What new tests will we need?
 
@@ -188,7 +181,6 @@ order, we will:
 
 ### Who does what?
 
-<!-- TODO (team): confirm or change these owners. Proposed from who wrote each part of the spec. -->
 
 | Item | Owner |
 | --- | --- |
@@ -200,23 +192,24 @@ order, we will:
 
 ## Attribution
 
-<!-- TODO (team): fill in names and change "How" to match what each person actually did. -->
+
 
 | File | Who | How |
 | --- | --- | --- |
-| `LinkedChain.java` | | GenAI-generated from our spec; reviewed by: |
-| `Raffle.java` | | GenAI-generated from our spec; reviewed by: |
-| `RaffleMenu.java` | | GenAI-generated from our spec; reviewed by: |
-| `Entrant.java` | | GenAI-generated from our spec; reviewed by: |
-| `Ticket.java` | | GenAI-generated from our spec; reviewed by: |
-| `Prize.java` | | GenAI-generated from our spec; reviewed by: |
-| `Winner.java` | | GenAI-generated from our spec; reviewed by: |
-| Test files (`LinkedChainTest`, `RaffleTest`, `RaffleMenuTest`, `RaffleDataTest`) | | GenAI-generated from our test plan; not included in this prototype |
-| `README.md` | | GenAI-drafted; revised by: |
+| `LinkedChain.java` | | copied from given file |
+| `Raffle.java` | | GenAI-generated from our spec; reviewed by: Noah K| read over the code
+| `RaffleMenu.java` | | GenAI-generated from our spec; reviewed by: Noah R| read over the code
+| `Entrant.java` | | GenAI-generated from our spec; reviewed by: Vanessa| read over the code
+| `Ticket.java` | | GenAI-generated from our spec; reviewed by: Noah K| read over the code
+| `Prize.java` | | GenAI-generated from our spec; reviewed by: Jonathan| read over the code
+| `Winner.java` | | GenAI-generated from our spec; reviewed by: Noah R| read over the code
+| Test files (`LinkedChainTest`, `RaffleTest`, `RaffleMenuTest`, `RaffleDataTest`) | | GenAI-generated from our test plan; revied by: Vanessa | ran the test files
+| `README.md` | | GenAI-drafted; revised by: Jonathan | filled in the gaps
 
 **How we used GenAI.** We gave Claude (Anthropic's AI assistant) our full
 written specification – class design, UML, method table with Big-O, where
 validation lives, and test plan – and it generated the Java source, the
 JUnit tests, and a draft of this README. It flagged the places where the spec
 was ambiguous or where it departed from the spec (listed under Reflection).
-<!-- TODO (team): add what you reviewed, changed, or tested by hand. -->
+We reviewed the code to ensure that it looked good and then we ran the program
+ourselves to make sure that it worked as intended.
