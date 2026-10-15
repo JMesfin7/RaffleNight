@@ -13,6 +13,9 @@ save/load to a text file.
 
 ## Running
 
-Import into Eclipse as an existing project (needs the `CS2-Support` project in
-the same workspace) and run `RaffleMenu`. Tests are `*Test.java` and use
-`student.TestCase`.
+From the project folder:
+
+```
+javac -d bin src/raffle/*.java
+java -cp bin raffle.RaffleMenu
+```
