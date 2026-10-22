@@ -15,6 +15,10 @@ All source files are in `src/raffle`:
 
 The program uses only the standard Java library.
 
+## Class Diagram
+
+![RaffleNight UML class diagram](docs/class-diagram.png)
+
 ## Requirements
 
 Java 8 or newer (`javac` and `java` on your PATH).
